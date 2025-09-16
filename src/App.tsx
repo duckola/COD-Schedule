@@ -6,7 +6,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>Committe on Documentation Schedule</h1>
+      <h1>Committe on Document Schedule</h1>
       <ScheduleGrid />
     </div>
   );
