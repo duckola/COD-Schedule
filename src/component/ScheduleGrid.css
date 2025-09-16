@@ -1,0 +1,66 @@
+/* src/components/ScheduleGrid.css */
+.schedule-container {
+    overflow-x: auto;
+  }
+  
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 800px; /* Ensure table doesn't get too small */
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .schedule-table th {
+    background-color: #e2eafc;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .schedule-table thead th:first-child {
+      z-index: 11; /* Ensure time header stays on top of day headers */
+  }
+  
+  
+  .time-header, .time-cell {
+    background-color: #f7f9fd;
+    font-weight: bold;
+    width: 100px; /* Fixed width for time column */
+    position: sticky;
+    left: 0;
+    z-index: 5; /* Keep time column visible on horizontal scroll */
+  }
+  
+  .schedule-cell {
+    min-width: 120px; /* Minimum width for day cells */
+    height: 60px; /* Consistent height for each time slot */
+    font-size: 0.85em;
+    line-height: 1.2;
+  }
+  
+  .schedule-cell.free {
+    background-color: #e6ffe6; /* Light green for free slots */
+    color: #006400; /* Darker green text */
+  }
+  
+  .schedule-cell.busy {
+    background-color: #ffe6e6; /* Light red for busy slots */
+    color: #8b0000; /* Darker red text */
+  }
+  
+  .status-free {
+    font-weight: bold;
+  }
+  
+  .status-busy {
+    font-weight: bold;
+  }
